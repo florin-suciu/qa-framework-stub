@@ -1,0 +1,14 @@
+version: 1
+disable_existing_loggers: False
+formatters:
+  default:
+    format: "%(asctime)s - %(levelname)s - %(message)s"
+handlers:
+  file_handler:
+    class: "logging.FileHandler"
+    level: %(log_level)s
+    formatter: default
+    filename: %(log_file)s
+root:
+  handlers: [file_handler]
+  level: %(log_level)s
